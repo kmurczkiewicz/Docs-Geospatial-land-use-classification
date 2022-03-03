@@ -82,34 +82,6 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#sat_img_classifier._natural_sort" title="sat_img_classifier._natural_sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_natural_sort</span></code></a>(list_to_sort)</p></td>
-<td><p>Function to perform natural sort on given list.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py function">
-<dt class="sig sig-object py" id="sat_img_classifier._natural_sort">
-<span class="sig-prename descclassname"><span class="pre">sat_img_classifier.</span></span><span class="sig-name descname"><span class="pre">_natural_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_to_sort</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sat_img_classifier._natural_sort" title="Permalink to this definition"></a></dt>
-<dd><p>Function to perform natural sort on given list.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>list_to_sort</strong> – list to be sorted using natural sort algorithm</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>list sorted in natural sort order</p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py class">
 <dt class="sig sig-object py" id="sat_img_classifier.SatelliteImageClassifier">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sat_img_classifier.</span></span><span class="sig-name descname"><span class="pre">SatelliteImageClassifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sat_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sat_img_classifier.SatelliteImageClassifier" title="Permalink to this definition"></a></dt>
@@ -163,6 +135,44 @@ on rows are concatenated into single image, which is final land use classificati
 <li><p><strong>sat_image</strong> – str name of satellite image for which land use map shall be generated</p></li>
 <li><p><strong>original_img_arr</strong> – numpy array representing original sat image</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sat_img_classifier.SatelliteImageClassifier._reset_mapped_classes">
+<span class="sig-name descname"><span class="pre">_reset_mapped_classes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sat_img_classifier.SatelliteImageClassifier._reset_mapped_classes" title="Permalink to this definition"></a></dt>
+<dd><p>Function to reset mapped classes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sat_img_classifier.SatelliteImageClassifier._clear_tile_dirs">
+<span class="sig-name descname"><span class="pre">_clear_tile_dirs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sat_img_classifier.SatelliteImageClassifier._clear_tile_dirs" title="Permalink to this definition"></a></dt>
+<dd><p>Function to remove all tiles and mapped tiles, as for multiple sat images
+empty tiles dirs are required.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sat_img_classifier.SatelliteImageClassifier._set_bar_text_value">
+<span class="sig-name descname"><span class="pre">_set_bar_text_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_plot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sat_img_classifier.SatelliteImageClassifier._set_bar_text_value" title="Permalink to this definition"></a></dt>
+<dd><p>Function to display bar value above bar plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bar_plot</strong> – matplotlib.pyplot.bar object</p></li>
+<li><p><strong>bar_value</strong> – value to be displayed above bar</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sat_img_classifier.SatelliteImageClassifier._plot_class_distribution">
+<span class="sig-name descname"><span class="pre">_plot_class_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sat_img</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sat_img_classifier.SatelliteImageClassifier._plot_class_distribution" title="Permalink to this definition"></a></dt>
+<dd><p>Function to plot predicted classes distribution on given satellite image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sat_image</strong> – str name of satellite image</p>
 </dd>
 </dl>
 </dd></dl>

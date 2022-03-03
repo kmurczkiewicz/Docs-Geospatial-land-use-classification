@@ -155,13 +155,29 @@ Load test, train and validation data into memory.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="execution.base_executor.BaseExecutor.stage_analyze_saved_networks">
-<span class="sig-name descname"><span class="pre">stage_analyze_saved_networks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#execution.base_executor.BaseExecutor.stage_analyze_saved_networks" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">stage_analyze_saved_networks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nn_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#execution.base_executor.BaseExecutor.stage_analyze_saved_networks" title="Permalink to this definition"></a></dt>
 <dd><p>Function to load and display analysis all networks created by app.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="execution.base_executor.BaseExecutor.stage_analyze_given_network">
+<span class="sig-name descname"><span class="pre">stage_analyze_given_network</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#execution.base_executor.BaseExecutor.stage_analyze_given_network" title="Permalink to this definition"></a></dt>
+<dd><p>Function to analyze given network model. For given model filters shapes, filters
+sample for given layer and feature maps for each conv2d layer are displayed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>network_name</strong> – str network name to be analyzed</p></li>
+<li><p><strong>layer_num</strong> – int number of layer to be analyzed</p></li>
+<li><p><strong>image_path</strong> – str path to image to analyze kernels and feature map</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="execution.base_executor.BaseExecutor.stage_nn_init">
-<span class="sig-name descname"><span class="pre">stage_nn_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nn_topology</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#execution.base_executor.BaseExecutor.stage_nn_init" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">stage_nn_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nn_topology</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_activation_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#execution.base_executor.BaseExecutor.stage_nn_init" title="Permalink to this definition"></a></dt>
 <dd><p>Execute neural network initialization stage.
 Create network object and compile the network.</p>
 <dl class="field-list simple">
@@ -172,6 +188,7 @@ Create network object and compile the network.</p>
 <li><p><strong>optimizer</strong> – tf optimizer to be used for network compilation</p></li>
 <li><p><strong>loss_function</strong> – tf loss function to be used for network compilation</p></li>
 <li><p><strong>metrics</strong> – list of metrics to be measured for network</p></li>
+<li><p><strong>layer_activation_function</strong> – str name of nn layer activation function</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -182,7 +199,7 @@ Create network object and compile the network.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="execution.base_executor.BaseExecutor.stage_nn_train">
-<span class="sig-name descname"><span class="pre">stage_nn_train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cnn_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">src.nn_library.network.Neural_network</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#execution.base_executor.BaseExecutor.stage_nn_train" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">stage_nn_train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cnn_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">src.nn_library.network.Neural_network</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#execution.base_executor.BaseExecutor.stage_nn_train" title="Permalink to this definition"></a></dt>
 <dd><p>Execute network training stage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -190,6 +207,7 @@ Create network object and compile the network.</p>
 <li><p><strong>cnn_model</strong> – object of type src.nn_library.network.Neural_network</p></li>
 <li><p><strong>data</strong> – dict of test, train and validation data to be used in training</p></li>
 <li><p><strong>epochs</strong> – number of training iterations</p></li>
+<li><p><strong>batch_size</strong> – batch size</p></li>
 </ul>
 </dd>
 </dl>
@@ -235,6 +253,25 @@ of satellite images.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sat_img_list</strong> – list of str names of satellite images to be used</p></li>
 <li><p><strong>network_name</strong> – str name of network to be used for land use classification on given sat image</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="execution.base_executor.BaseExecutor.stage_hyper_parameters_tuning">
+<span class="sig-name descname"><span class="pre">stage_hyper_parameters_tuning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executions_per_trial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_epoch_search</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#execution.base_executor.BaseExecutor.stage_hyper_parameters_tuning" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize CNN Keras Hyper model and NetworkTuner object. Perform hyper params tuning with given
+execution params.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – dict of test, train and validation data to be used in training</p></li>
+<li><p><strong>overwrite</strong> – bool, overwrite existing tuner</p></li>
+<li><p><strong>max_trials</strong> – int, num of max trials for tuning</p></li>
+<li><p><strong>executions_per_trial</strong> – int, num of executions per trial</p></li>
+<li><p><strong>n_epoch_search</strong> – int, num of epochs to perform search</p></li>
+<li><p><strong>save_model</strong> – bool, if output nn model shall be saved</p></li>
 </ul>
 </dd>
 </dl>

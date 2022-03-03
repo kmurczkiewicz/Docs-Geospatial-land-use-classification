@@ -17,6 +17,7 @@ Functions
    data.analyze.plot
    data.analyze.display_example
    data.analyze.display_values_distribution_values
+   data.analyze._get_network_details
    data.analyze.analyze_saved_networks
 
 
@@ -56,12 +57,22 @@ Functions
    :param data_distribution_values: dict containing distribution details of test, train and validation data frames.
 
 
-.. py:function:: analyze_saved_networks(paths)
+.. py:function:: _get_network_details(network_path)
+
+   Function to read network .json descriptor into pandas dataframe object.
+
+   :param network_path: str path to network
+   :return: pandas dataframe object
+
+
+.. py:function:: analyze_saved_networks(paths, nn_dir)
 
    Function to analyze saved networks in base app dir. For each network,
    details .json file is loaded into pandas data frame and displayed. Networks
    are sorted in data frame descending by FTA (First Test Accuracy).
 
    :param paths: dict of app paths
+   :param nn_dir: str name of directory from which network shall be analyzed, if empty,
+       recursively search for saved networks and analyze them all.
 
 

@@ -62,12 +62,22 @@ Classes
       :return: dict of networks
 
 
-   .. py:method:: stage_analyze_saved_networks(self)
+   .. py:method:: stage_analyze_saved_networks(self, nn_dir)
 
       Function to load and display analysis all networks created by app.
 
 
-   .. py:method:: stage_nn_init(self, nn_topology, input_shape, optimizer, loss_function, metrics)
+   .. py:method:: stage_analyze_given_network(self, network_name, layer_num, image_path)
+
+      Function to analyze given network model. For given model filters shapes, filters
+      sample for given layer and feature maps for each conv2d layer are displayed.
+
+      :param network_name: str network name to be analyzed
+      :param layer_num: int number of layer to be analyzed
+      :param image_path: str path to image to analyze kernels and feature map
+
+
+   .. py:method:: stage_nn_init(self, nn_topology, input_shape, optimizer, loss_function, layer_activation_function, metrics)
 
       Execute neural network initialization stage.
       Create network object and compile the network.
@@ -77,16 +87,18 @@ Classes
       :param optimizer: tf optimizer to be used for network compilation
       :param loss_function: tf loss function to be used for network compilation
       :param metrics: list of metrics to be measured for network
+      :param layer_activation_function: str name of nn layer activation function
       :return: initialized network model
 
 
-   .. py:method:: stage_nn_train(self, cnn_model: src.nn_library.network.Neural_network, data, epochs)
+   .. py:method:: stage_nn_train(self, cnn_model: src.nn_library.network.Neural_network, data, epochs, batch_size)
 
       Execute network training stage.
 
       :param cnn_model: object of type src.nn_library.network.Neural_network
       :param data: dict of test, train and validation data to be used in training
       :param epochs: number of training iterations
+      :param batch_size: batch size
 
 
    .. py:method:: stage_nn_test(self, cnn_model: src.nn_library.network.Neural_network, data, plot_probability)
@@ -114,6 +126,19 @@ Classes
 
       :param sat_img_list: list of str names of satellite images to be used
       :param network_name: str name of network to be used for land use classification on given sat image
+
+
+   .. py:method:: stage_hyper_parameters_tuning(self, data, overwrite, max_trials, executions_per_trial, n_epoch_search, save_model)
+
+      Initialize CNN Keras Hyper model and NetworkTuner object. Perform hyper params tuning with given
+      execution params.
+
+      :param data: dict of test, train and validation data to be used in training
+      :param overwrite: bool, overwrite existing tuner
+      :param max_trials: int, num of max trials for tuning
+      :param executions_per_trial: int, num of executions per trial
+      :param n_epoch_search: int, num of epochs to perform search
+      :param save_model: bool, if output nn model shall be saved
 
 
 

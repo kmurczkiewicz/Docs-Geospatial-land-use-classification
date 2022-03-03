@@ -30,13 +30,14 @@ Classes
       :param metrics: array of metrics to be measured
 
 
-   .. py:method:: train_cnn_model(self, data: dict, epochs_num: int, checkpoint_filepath)
+   .. py:method:: train_cnn_model(self, data: dict, epochs_num: int, checkpoint_filepath, batch_size)
 
       Function to train network using given params.
 
       :param data: dict of test, train and validation data to be used in training
       :param epochs_num: number of training iterations
       :param checkpoint_filepath: str path to model checkpoint object
+      :param batch_size: batch size
 
 
    .. py:method:: test_network(self, data: dict, label_map, plot_probability)
@@ -48,9 +49,11 @@ Classes
       :return: str network testing accuracy
 
 
-   .. py:method:: init_network(self)
+   .. py:method:: init_network(self, layer_activation_function)
 
       Function to initialize network object topology.
+
+      :param layer_activation_function: str name of nn layer activation function
 
 
    .. py:method:: plot_test_confusion_matrix(self, y_true, y_predicted, class_labels)

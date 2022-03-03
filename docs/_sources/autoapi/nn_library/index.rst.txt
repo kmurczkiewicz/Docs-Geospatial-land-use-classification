@@ -11,6 +11,9 @@ Submodules
    :maxdepth: 1
 
    network/index.rst
+   network_analyzer/index.rst
+   network_hyper_model/index.rst
+   network_tuner/index.rst
    topologies/index.rst
 
 

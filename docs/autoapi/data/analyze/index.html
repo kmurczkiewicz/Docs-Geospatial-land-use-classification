@@ -89,7 +89,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#data.analyze.display_values_distribution_values" title="data.analyze.display_values_distribution_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_values_distribution_values</span></code></a>(data_distribution_values)</p></td>
 <td><p>Function to display quantitative distribution of classes</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#data.analyze.analyze_saved_networks" title="data.analyze.analyze_saved_networks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyze_saved_networks</span></code></a>(paths)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#data.analyze._get_network_details" title="data.analyze._get_network_details"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_network_details</span></code></a>(network_path)</p></td>
+<td><p>Function to read network .json descriptor into pandas dataframe object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#data.analyze.analyze_saved_networks" title="data.analyze.analyze_saved_networks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyze_saved_networks</span></code></a>(paths, nn_dir)</p></td>
 <td><p>Function to analyze saved networks in base app dir. For each network,</p></td>
 </tr>
 </tbody>
@@ -152,14 +155,32 @@ in test, train and validation data frames.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="data.analyze._get_network_details">
+<span class="sig-prename descclassname"><span class="pre">data.analyze.</span></span><span class="sig-name descname"><span class="pre">_get_network_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.analyze._get_network_details" title="Permalink to this definition"></a></dt>
+<dd><p>Function to read network .json descriptor into pandas dataframe object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network_path</strong> – str path to network</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pandas dataframe object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="data.analyze.analyze_saved_networks">
-<span class="sig-prename descclassname"><span class="pre">data.analyze.</span></span><span class="sig-name descname"><span class="pre">analyze_saved_networks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paths</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.analyze.analyze_saved_networks" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">data.analyze.</span></span><span class="sig-name descname"><span class="pre">analyze_saved_networks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nn_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.analyze.analyze_saved_networks" title="Permalink to this definition"></a></dt>
 <dd><p>Function to analyze saved networks in base app dir. For each network,
 details .json file is loaded into pandas data frame and displayed. Networks
 are sorted in data frame descending by FTA (First Test Accuracy).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>paths</strong> – dict of app paths</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>paths</strong> – dict of app paths</p></li>
+<li><p><strong>nn_dir</strong> – str name of directory from which network shall be analyzed, if empty,
+recursively search for saved networks and analyze them all.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

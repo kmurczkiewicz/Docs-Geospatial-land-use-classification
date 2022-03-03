@@ -16,22 +16,6 @@ Classes
 
 
 
-Functions
-~~~~~~~~~
-
-.. autoapisummary::
-
-   sat_img_classifier._natural_sort
-
-
-
-.. py:function:: _natural_sort(list_to_sort)
-
-   Function to perform natural sort on given list.
-
-   :param list_to_sort: list to be sorted using natural sort algorithm
-   :return: list sorted in natural sort order
-
 
 .. py:class:: SatelliteImageClassifier(paths, network_name, sat_images: list)
 
@@ -69,6 +53,32 @@ Functions
       :param tiles_row_col: dict containing image dimensions in number of tiles
       :param sat_image: str name of satellite image for which land use map shall be generated
       :param original_img_arr: numpy array representing original sat image
+
+
+   .. py:method:: _reset_mapped_classes(self)
+
+      Function to reset mapped classes.
+
+
+   .. py:method:: _clear_tile_dirs(self)
+
+      Function to remove all tiles and mapped tiles, as for multiple sat images
+      empty tiles dirs are required.
+
+
+   .. py:method:: _set_bar_text_value(self, bar_plot, bar_value)
+
+      Function to display bar value above bar plot.
+
+      :param bar_plot: matplotlib.pyplot.bar object
+      :param bar_value: value to be displayed above bar
+
+
+   .. py:method:: _plot_class_distribution(self, sat_img)
+
+      Function to plot predicted classes distribution on given satellite image.
+
+      :param sat_image: str name of satellite image
 
 
    .. py:method:: run_classification(self)
