@@ -1,7 +1,7 @@
-:py:mod:`src.nn_library.network_tuner`
-======================================
+:py:mod:`src.nn_library.nn_tuner`
+=================================
 
-.. py:module:: src.nn_library.network_tuner
+.. py:module:: src.nn_library.nn_tuner
 
 
 Module Contents
@@ -12,7 +12,7 @@ Classes
 
 .. autoapisummary::
 
-   src.nn_library.network_tuner.NetworkTuner
+   src.nn_library.nn_tuner.NetworkTuner
 
 
 

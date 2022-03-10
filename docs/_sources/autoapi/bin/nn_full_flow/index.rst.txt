@@ -32,7 +32,7 @@ Attributes
    
 
 .. py:data:: ACTIVATIONS
-   :annotation: = ['relu', 'tanh', 'sigmoid']
+   :annotation: = ['relu', 'tanh', 'selu', 'elu']
 
    
 

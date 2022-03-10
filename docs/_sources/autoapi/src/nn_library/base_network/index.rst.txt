@@ -1,7 +1,7 @@
-:py:mod:`src.nn_library.network`
-================================
+:py:mod:`src.nn_library.base_network`
+=====================================
 
-.. py:module:: src.nn_library.network
+.. py:module:: src.nn_library.base_network
 
 
 Module Contents
@@ -12,12 +12,12 @@ Classes
 
 .. autoapisummary::
 
-   src.nn_library.network.Neural_network
+   src.nn_library.base_network.Neural_network
 
 
 
 
-.. py:class:: Neural_network(nn_topology=src.nn_library.topologies.topology_A, input_shape=(64, 64, 3))
+.. py:class:: Neural_network(nn_architecture=src.nn_library.nn_architectures.architecture_A, input_shape=(64, 64, 3))
 
    Class to unify and optimize creation of neural networks using different set of parameters.
 
@@ -51,7 +51,7 @@ Classes
 
    .. py:method:: init_network(self, layer_activation_function)
 
-      Function to initialize network object topology.
+      Function to initialize network object architecture.
 
       :param layer_activation_function: str name of nn layer activation function
 

@@ -177,13 +177,13 @@ sample for given layer and feature maps for each conv2d layer are displayed.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="src.execution.base_executor.BaseExecutor.stage_nn_init">
-<span class="sig-name descname"><span class="pre">stage_nn_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nn_topology</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_activation_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.execution.base_executor.BaseExecutor.stage_nn_init" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">stage_nn_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nn_architecture</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_activation_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.execution.base_executor.BaseExecutor.stage_nn_init" title="Permalink to this definition"></a></dt>
 <dd><p>Execute neural network initialization stage.
 Create network object and compile the network.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nn_topology</strong> – str topology name to be used</p></li>
+<li><p><strong>nn_architecture</strong> – str architecture name to be used</p></li>
 <li><p><strong>input_shape</strong> – tuple of three integers</p></li>
 <li><p><strong>optimizer</strong> – tf optimizer to be used for network compilation</p></li>
 <li><p><strong>loss_function</strong> – tf loss function to be used for network compilation</p></li>
@@ -199,12 +199,12 @@ Create network object and compile the network.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="src.execution.base_executor.BaseExecutor.stage_nn_train">
-<span class="sig-name descname"><span class="pre">stage_nn_train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cnn_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../nn_library/network/index.html#src.nn_library.network.Neural_network" title="src.nn_library.network.Neural_network"><span class="pre">src.nn_library.network.Neural_network</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.execution.base_executor.BaseExecutor.stage_nn_train" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">stage_nn_train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cnn_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../nn_library/base_network/index.html#src.nn_library.base_network.Neural_network" title="src.nn_library.base_network.Neural_network"><span class="pre">src.nn_library.base_network.Neural_network</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.execution.base_executor.BaseExecutor.stage_nn_train" title="Permalink to this definition"></a></dt>
 <dd><p>Execute network training stage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cnn_model</strong> – object of type src.nn_library.network.Neural_network</p></li>
+<li><p><strong>cnn_model</strong> – object of type src.nn_library.base_network.Neural_network</p></li>
 <li><p><strong>data</strong> – dict of test, train and validation data to be used in training</p></li>
 <li><p><strong>epochs</strong> – number of training iterations</p></li>
 <li><p><strong>batch_size</strong> – batch size</p></li>
@@ -215,12 +215,12 @@ Create network object and compile the network.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="src.execution.base_executor.BaseExecutor.stage_nn_test">
-<span class="sig-name descname"><span class="pre">stage_nn_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cnn_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../nn_library/network/index.html#src.nn_library.network.Neural_network" title="src.nn_library.network.Neural_network"><span class="pre">src.nn_library.network.Neural_network</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_probability</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.execution.base_executor.BaseExecutor.stage_nn_test" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">stage_nn_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cnn_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../nn_library/base_network/index.html#src.nn_library.base_network.Neural_network" title="src.nn_library.base_network.Neural_network"><span class="pre">src.nn_library.base_network.Neural_network</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_probability</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.execution.base_executor.BaseExecutor.stage_nn_test" title="Permalink to this definition"></a></dt>
 <dd><p>Execute network testing stage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cnn_model</strong> – object of type src.nn_library.network.Neural_network</p></li>
+<li><p><strong>cnn_model</strong> – object of type src.nn_library.base_network.Neural_network</p></li>
 <li><p><strong>data</strong> – dict of test, train and validation data to be used in training</p></li>
 <li><p><strong>plot_probability</strong> – bool to define if class probability heatmap should be displayed</p></li>
 </ul>
@@ -230,14 +230,14 @@ Create network object and compile the network.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="src.execution.base_executor.BaseExecutor.stage_nn_save">
-<span class="sig-name descname"><span class="pre">stage_nn_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cnn_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../nn_library/network/index.html#src.nn_library.network.Neural_network" title="src.nn_library.network.Neural_network"><span class="pre">src.nn_library.network.Neural_network</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.execution.base_executor.BaseExecutor.stage_nn_save" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">stage_nn_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cnn_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../nn_library/base_network/index.html#src.nn_library.base_network.Neural_network" title="src.nn_library.base_network.Neural_network"><span class="pre">src.nn_library.base_network.Neural_network</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.execution.base_executor.BaseExecutor.stage_nn_save" title="Permalink to this definition"></a></dt>
 <dd><p>Execute save network stage. Save network in given dir with given name in .pb format.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>save_dir</strong> – str where network model will be saved in .pb format</p></li>
 <li><p><strong>network_name</strong> – str name of saved network</p></li>
-<li><p><strong>cnn_model</strong> – object of type src.nn_library.network.Neural_network</p></li>
+<li><p><strong>cnn_model</strong> – object of type src.nn_library.base_network.Neural_network</p></li>
 </ul>
 </dd>
 </dl>

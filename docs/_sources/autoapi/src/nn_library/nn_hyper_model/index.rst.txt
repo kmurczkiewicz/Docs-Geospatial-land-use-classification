@@ -1,7 +1,7 @@
-:py:mod:`src.nn_library.network_hyper_model`
-============================================
+:py:mod:`src.nn_library.nn_hyper_model`
+=======================================
 
-.. py:module:: src.nn_library.network_hyper_model
+.. py:module:: src.nn_library.nn_hyper_model
 
 
 Module Contents
@@ -12,7 +12,7 @@ Classes
 
 .. autoapisummary::
 
-   src.nn_library.network_hyper_model.NetworkHyperModel
+   src.nn_library.nn_hyper_model.NetworkHyperModel
 
 
 
@@ -21,7 +21,7 @@ Classes
 
    Bases: :py:obj:`kerastuner.HyperModel`
 
-   .. autoapi-inheritance-diagram:: src.nn_library.network_hyper_model.NetworkHyperModel
+   .. autoapi-inheritance-diagram:: src.nn_library.nn_hyper_model.NetworkHyperModel
       :parts: 1
       :private-bases:
 

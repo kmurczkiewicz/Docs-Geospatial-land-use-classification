@@ -33,21 +33,21 @@ Classes
       Execute data preparation and data analysis stage.
 
 
-   .. py:method:: execute_full_flow(self, topology, epochs, optimizer, loss_function, metrics, save_model, batch_size, layer_activation_function, plot_probability=True)
+   .. py:method:: execute_full_flow(self, architecture, epochs, loss_function, metrics, save_model, batch_size, optimizers, activations, plot_probability=True)
 
       Execute all stages. Prepare load train, test and validation data into memory,
-      initialize convolutional neural network with given topology, train and test the network.
+      initialize convolutional neural network with given architecture, train and test the network.
       Save the model locally.
 
-      :param topology: str network topology name
+      :param architecture: str network architecture name
       :param epochs: int number of network training iterations
-      :param optimizer: tf optimizer to be used for network compilation
       :param loss_function: tf loss function to be used for network compilation
       :param metrics: list of metrics to be measured for network
       :param save_model: bool defining if output model should be saved
       :param plot_probability: bool to define if class probability heatmap should be displayed
       :param batch_size: batch size
-      :param layer_activation_function: str name of nn layer activation function
+      :param optimizers: dict of optimizers and learning rates to be used
+      :param activations: list of layer activation functions
 
 
    .. py:method:: execute_test_networks(self, networks_to_test=[], plot_probability=True)

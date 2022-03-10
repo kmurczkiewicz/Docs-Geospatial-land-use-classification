@@ -1,7 +1,7 @@
-:py:mod:`src.nn_library.network_analyzer`
-=========================================
+:py:mod:`src.nn_library.nn_analyzer`
+====================================
 
-.. py:module:: src.nn_library.network_analyzer
+.. py:module:: src.nn_library.nn_analyzer
 
 
 Module Contents
@@ -12,7 +12,7 @@ Classes
 
 .. autoapisummary::
 
-   src.nn_library.network_analyzer.NetworkAnalyzer
+   src.nn_library.nn_analyzer.NetworkAnalyzer
 
 
 
