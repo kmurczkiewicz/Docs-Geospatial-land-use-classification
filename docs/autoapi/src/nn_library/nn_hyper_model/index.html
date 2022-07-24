@@ -15,6 +15,7 @@
         <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
         <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../../_static/doctools.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -66,12 +67,12 @@
            <div itemprop="articleBody">
              
   <section id="module-src.nn_library.nn_hyper_model">
-<span id="src-nn-library-nn-hyper-model"></span><h1><a class="reference internal" href="#module-src.nn_library.nn_hyper_model" title="src.nn_library.nn_hyper_model"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.nn_library.nn_hyper_model</span></code></a><a class="headerlink" href="#module-src.nn_library.nn_hyper_model" title="Permalink to this headline"></a></h1>
+<span id="src-nn-library-nn-hyper-model"></span><h1><a class="reference internal" href="#module-src.nn_library.nn_hyper_model" title="src.nn_library.nn_hyper_model"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.nn_library.nn_hyper_model</span></code></a><a class="headerlink" href="#module-src.nn_library.nn_hyper_model" title="Permalink to this heading"></a></h1>
 <section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
 <section id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
-<table class="longtable docutils align-default">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -86,10 +87,15 @@
 <dt class="sig sig-object py" id="src.nn_library.nn_hyper_model.NetworkHyperModel">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.nn_library.nn_hyper_model.</span></span><span class="sig-name descname"><span class="pre">NetworkHyperModel</span></span><a class="headerlink" href="#src.nn_library.nn_hyper_model.NetworkHyperModel" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">kerastuner.HyperModel</span></code></p>
-<div class="graphviz"><img src="../../../../_images/inheritance-33e36036ef5dfee7e7878a54ef145f29b68512ed.png" alt="Inheritance diagram of src.nn_library.nn_hyper_model.NetworkHyperModel" usemap="#inheritance8a04f360d8" class="inheritance graphviz" /></div>
-<map id="inheritance8a04f360d8" name="inheritance8a04f360d8">
-<area shape="rect" id="node2" href="#src.nn_library.nn_hyper_model.NetworkHyperModel" target="_top" title="Class to manage Keras Hyper Model structure." alt="" coords="144,5,283,31"/>
-</map><p>Class to manage Keras Hyper Model structure.</p>
+digraph inheritance8a04f360d8 {
+bgcolor=transparent;
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;HyperModel&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;Defines a search space of models.&quot;];
+  &quot;NetworkHyperModel&quot; [URL=&quot;#src.nn_library.nn_hyper_model.NetworkHyperModel&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Class to manage Keras Hyper Model structure.&quot;];
+  &quot;HyperModel&quot; -&gt; &quot;NetworkHyperModel&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+}
+<p>Class to manage Keras Hyper Model structure.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="src.nn_library.nn_hyper_model.NetworkHyperModel.fit">
 <span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.nn_library.nn_hyper_model.NetworkHyperModel.fit" title="Permalink to this definition"></a></dt>

@@ -1,7 +1,7 @@
-:py:mod:`src.client_use_case`
-=============================
+:py:mod:`src.sat_img_classifier`
+================================
 
-.. py:module:: src.client_use_case
+.. py:module:: src.sat_img_classifier
 
 
 Submodules

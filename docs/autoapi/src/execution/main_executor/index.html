@@ -15,6 +15,7 @@
         <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
         <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../../_static/doctools.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -66,12 +67,12 @@
            <div itemprop="articleBody">
              
   <section id="module-src.execution.main_executor">
-<span id="src-execution-main-executor"></span><h1><a class="reference internal" href="#module-src.execution.main_executor" title="src.execution.main_executor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.execution.main_executor</span></code></a><a class="headerlink" href="#module-src.execution.main_executor" title="Permalink to this headline"></a></h1>
+<span id="src-execution-main-executor"></span><h1><a class="reference internal" href="#module-src.execution.main_executor" title="src.execution.main_executor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">src.execution.main_executor</span></code></a><a class="headerlink" href="#module-src.execution.main_executor" title="Permalink to this heading"></a></h1>
 <section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
 <section id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
-<table class="longtable docutils align-default">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -86,11 +87,15 @@
 <dt class="sig sig-object py" id="src.execution.main_executor.MainExecutor">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.execution.main_executor.</span></span><span class="sig-name descname"><span class="pre">MainExecutor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">display</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.execution.main_executor.MainExecutor" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="../base_executor/index.html#src.execution.base_executor.BaseExecutor" title="src.execution.base_executor.BaseExecutor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">src.execution.base_executor.BaseExecutor</span></code></a></p>
-<div class="graphviz"><img src="../../../../_images/inheritance-65e490c19a445ca6261d11a0c91e2dec2f946b18.png" alt="Inheritance diagram of src.execution.main_executor.MainExecutor" usemap="#inheritancedd4cb0971a" class="inheritance graphviz" /></div>
-<map id="inheritancedd4cb0971a" name="inheritancedd4cb0971a">
-<area shape="rect" id="node1" href="../base_executor/index.html#src.execution.base_executor.BaseExecutor" target="_top" title="Base executor class defining partial execution stages" alt="" coords="5,5,109,31"/>
-<area shape="rect" id="node2" href="#src.execution.main_executor.MainExecutor" target="_top" title="Main executor class that defines execution blocks to perform complex tasks using partial stages" alt="" coords="157,5,260,31"/>
-</map><p>Main executor class that defines execution blocks to perform complex tasks using partial stages
+digraph inheritancedd4cb0971a {
+bgcolor=transparent;
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;BaseExecutor&quot; [URL=&quot;../base_executor/index.html#src.execution.base_executor.BaseExecutor&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Base executor class defining partial execution stages&quot;];
+  &quot;MainExecutor&quot; [URL=&quot;#src.execution.main_executor.MainExecutor&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Main executor class that defines execution blocks to perform complex tasks using partial stages&quot;];
+  &quot;BaseExecutor&quot; -&gt; &quot;MainExecutor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+}
+<p>Main executor class that defines execution blocks to perform complex tasks using partial stages
 from parent BaseExecutor class.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="src.execution.main_executor.MainExecutor.execute_data_analysis">

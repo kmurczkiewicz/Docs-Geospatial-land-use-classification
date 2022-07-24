@@ -17,25 +17,6 @@ Functions
 
 
 
-Attributes
-~~~~~~~~~~
-
-.. autoapisummary::
-
-   bin.nn_full_flow.OPTIMIZERS
-   bin.nn_full_flow.ACTIVATIONS
-
-
-.. py:data:: OPTIMIZERS
-   
-
-   
-
-.. py:data:: ACTIVATIONS
-   :annotation: = ['relu', 'tanh', 'selu', 'elu']
-
-   
-
 .. py:function:: main()
 
 

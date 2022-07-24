@@ -1,7 +1,7 @@
-:py:mod:`src.client_use_case.sat_img_classifier`
-================================================
+:py:mod:`src.sat_img_classifier.sat_img_classifier`
+===================================================
 
-.. py:module:: src.client_use_case.sat_img_classifier
+.. py:module:: src.sat_img_classifier.sat_img_classifier
 
 
 Module Contents
@@ -12,7 +12,7 @@ Classes
 
 .. autoapisummary::
 
-   src.client_use_case.sat_img_classifier.SatelliteImageClassifier
+   src.sat_img_classifier.sat_img_classifier.SatelliteImageClassifier
 
 
 

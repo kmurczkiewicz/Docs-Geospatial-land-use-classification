@@ -65,7 +65,7 @@ Classes
       :param class_labels: list of all class labels
 
 
-   .. py:method:: plot_model_result(self, mode, figure_num, text)
+   .. py:method:: plot_model_result(self, mode, figure_num)
 
       Function to plot network accuracy and loss function value over training (epochs).
 
